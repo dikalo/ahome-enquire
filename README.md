@@ -19,7 +19,7 @@ Get high quality support through Ahomé (Note that Ahomé-Ext is FREE to use wit
 
 2)  Inherit the ahome-enquire module
 ```xml
-     <inherits name='com.ait.toolkit.enquire.Enquire'/>
+<inherits name='com.ait.toolkit.enquire.Enquire'/>
 ```
 
 3)  Start coding
