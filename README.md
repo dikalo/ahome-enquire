@@ -16,9 +16,7 @@ Get high quality support through Ahomé (Note that Ahomé-Ext is FREE to use wit
 
 ## Getting Started with Ahomé-Enquire
 1)  <a href="https://github.com/ahome-it/ahome-offline/releases/download/1.0.0/ahome-enquire-1.0.0.jar">Download the jar file</a>
-
 2)  Inherit the ahome-enquire module
-
 ```xml
      <inherits name='com.ait.toolkit.enquire.Enquire'/>
 ```
