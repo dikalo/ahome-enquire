@@ -24,7 +24,7 @@ Get high quality support through Ahomé (Note that Ahomé-Ext is FREE to use wit
 
 3)  Start coding
 ```java
-     package com.ait.toolkit.playground.client;
+package com.ait.toolkit.playground.client;
 
 import com.ait.toolkit.core.client.Function;
 import com.ait.toolkit.enquire.client.Enquire;
