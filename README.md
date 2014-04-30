@@ -17,7 +17,8 @@ Get high quality support through Ahomé (Note that Ahomé-Ext is FREE to use wit
 ## Getting Started with Ahomé-Enquire
 * <a href="https://github.com/ahome-it/ahome-offline/releases/download/1.0.0/ahome-enquire-1.0.0.jar">Download the jar file</a>
 * Inherit the ahome-enquire module
-  ```javascript
+
+```javascript
       enquire.register(query /* string */, handler /* object || array  || function */);
- ```
+```
 *
