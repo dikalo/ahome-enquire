@@ -30,6 +30,7 @@ import com.ait.toolkit.core.client.Function;
 import com.ait.toolkit.enquire.client.Enquire;
 import com.google.gwt.core.client.EntryPoint;
 import com.google.gwt.user.client.Window;
+import com.google.gwt.user.client.ui.RootPanel;
 
 public class EnquireEntryPoint implements EntryPoint {
 
@@ -38,7 +39,7 @@ public class EnquireEntryPoint implements EntryPoint {
 		Enquire.get().register("screen and (max-width:45em)", new Function() {
 			@Override
 			public void execute() {
-				Window.alert("We have a match !");
+				RootPanel.getBodyElement().getStyle().setBackgroundColor("green");
 			}
 		});
 	}
