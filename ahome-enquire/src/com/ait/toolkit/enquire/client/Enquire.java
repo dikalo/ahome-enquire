@@ -34,7 +34,7 @@ public class Enquire extends JsObject {
 	private static void load() {
 		if (!isLoaded()) {
 			ScriptInjector.fromString(ressources.polyfill().getText()).setWindow(ScriptInjector.TOP_WINDOW).inject();
-			ScriptInjector.fromString(ressources.jsMin().getText()).setWindow(ScriptInjector.TOP_WINDOW).inject();
+			ScriptInjector.fromString(ressources.js().getText()).setWindow(ScriptInjector.TOP_WINDOW).inject();
 		}
 	}
 
@@ -48,7 +48,10 @@ public class Enquire extends JsObject {
 	 */
 	public native Enquire register(String mediaQuery, Function callback)/*-{
 		var peer = this.@com.ait.toolkit.core.client.JsObject::getJsObj()();
-		var obj = peerregister(mediaQuery, $entry(function() {
+		if (!peer) {
+			peer = $wnd.enquire;
+		}
+		var obj = peer.register(mediaQuery, $entry(function() {
 			callback.@com.ait.toolkit.core.client.Function::execute()();
 		}));
 		return @com.ait.toolkit.enquire.client.Enquire::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
@@ -56,6 +59,9 @@ public class Enquire extends JsObject {
 
 	public native void register(String mediaQuery, EnquireOptions options)/*-{
 		var peer = this.@com.ait.toolkit.core.client.JsObject::getJsObj()();
+		if (!peer) {
+			peer = $wnd.enquire;
+		}
 		var obj = peer.register(mediaQuery,
 				options.@com.ait.toolkit.core.client.JsObject::getJsObj()());
 		return @com.ait.toolkit.enquire.client.Enquire::new(Lcom/google/gwt/core/client/JavaScriptObject;)(obj);
@@ -63,6 +69,9 @@ public class Enquire extends JsObject {
 
 	public native void register(String mediaQuery, EnquireOptions options, boolean shouldDegrade)/*-{
 		var peer = this.@com.ait.toolkit.core.client.JsObject::getJsObj()();
+		if (!peer) {
+			peer = $wnd.enquire;
+		}
 		var obj = peer.register(mediaQuery,
 				options.@com.ait.toolkit.core.client.JsObject::getJsObj()(),
 				shouldDegrade);
