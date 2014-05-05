@@ -46,7 +46,7 @@ public class EnquireEntryPoint implements EntryPoint {
 }
 ```
 
-4) Find more code the  <a href="">Examples</a>
+4) Find more code in the  <a href="">Examples Folder</a>
 
 5) Learn more about our Open Source tools  <a href="http://opensource.ahome-it.com/">HERE</a>
 
